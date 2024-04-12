@@ -16,4 +16,4 @@ Config.Modules = {
     },
 }
 
-Config.InventoryName = 'qb-inventory'
+Config.InventoryName = 'ox_inventory'

@@ -17,15 +17,18 @@ local function convert(data)
     }
 
     local new_input = {}
-    new_input.title = ConvertText(data.header) or 'Inputs'
+    -- new_input.title = ConvertText(data.header) or 'Inputs'
+    new_input.title = data.header or 'Inputs'
 
     local rows, ids = {}, {}
     for _, input in pairs(data.inputs) do
         rows[#rows+1] = {
             type = typesConvert[input.type] or 'input',
-            label = ConvertText(input.text),
+            -- label = ConvertText(input.text),
+            label = input.text,
             required = input.required,
-            default = ConvertText(input.default),
+            -- default = ConvertText(input.default),
+            default = input.default,
             password = input.type == 'password' or false,
         }
         ids[#ids+1] = input.name

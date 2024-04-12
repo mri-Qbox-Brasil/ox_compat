@@ -26,6 +26,7 @@ local html = {
 }
 
 function ConvertText(string)
+    if string == nil then return false end
     if string == '' then return false end
     if not string then return false end
 

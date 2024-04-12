@@ -9,7 +9,7 @@ end
 local function convert(menu)
     local new_context = {}
     new_context.id = menu.id or ('convert_'..math.random(1, 10000))
-    new_context.title = ConvertText(menu.title) or 'Options'
+    new_context.title = ConvertText(menu.title) or 'Opções'
 
     local options = {}
     for _,button in pairs(menu) do
